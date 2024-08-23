@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Miyagi Buffet</title>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="cardapio.css">
   <link rel="shortcut icon" href="Logo.png" type="image/x-icon">
 
 </head>
@@ -18,13 +19,102 @@
       <h1 class="titulos">Miyagi Buffet</h1>
       <img src="Logo.png" alt="Logo Myiagi" >
     </div>
-    <div>
+
+    <div id="barra">
         <button id="botoes"> <a href="index.html"> Início </a></button>
       <button id="botoes"> <a href="#sobre"> Sobre nós </a></button>
       <button id="botoes"> <a href="#orcamento"> Fale conosco</a> </button>
-    
+    </div>
+      <!--video da ideia: https://www.youtube.com/watch?v=dI8wiEs8cag&t=147s-->
+      <div id="container">
+        <div class='input-group'>
+          <div class="input-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <input id="search" type="text" class="input-field" placeholder="Pesquisar">
+       </div>
+
+       <ul class="items">
+          <li class="item">
+              <div class="item-image">
+                  <img src="/miyagibuffet/fotos/abstral-official-Pwcn31davYQ-unsplash.jpg" alt="Niguiri_salmao">
+              </div>
+
+              <div class="item-content">
+                <h2 class="item-title">
+                  Niguiri Salmão
+                </h2>
+
+                <p class="item-description">
+                  Pedaço de paraíso! Arroz avinagrado + salmão fresco = combinação perfeita. Saboreie a leveza e o frescor em cada mordida.  #sushi #niguiri #salmao
+                </p>
+
+                <p class="item-subtitle">
+                  <i class="fa-solid fa-bowl-food"></i>
+                  Dinheiros
+                </p>
+
+              </div>
+          </li>
+
+          <li class="item">
+            <div class="item-image">
+                <img src="/miyagibuffet/fotos/flyd-loB9-eAYt2k-unsplash.jpg" alt="Sashimi_salmao">
+            </div>
+
+            <div class="item-content">
+              <h2 class="item-title">
+                Sashimi Salmão
+              </h2>
+
+                          <p class="item-description">
+                Fatias finas e delicadas de salmão cru, com textura macia e sabor suave. Um clássico da culinária japonesa que encanta os paladares mais exigentes. 
+              </p>
+
+              <p class="item-subtitle">
+                <i class="fa-solid fa-bowl-food"></i>
+                Dinheiros
+              </p>
+
+
+            </div>
+        </li>
+
+        <li class="item">
+          <div class="item-image">
+              <img src="/miyagibuffet/fotos/atum.jpg" alt="Niguiri_atum">
+          </div>
+
+          <div class="item-content">
+            <h2 class="item-title">
+              Niguiri Atum
+            </h2>
+
+            <p class="item-description">
+              Arroz avinagrado com uma fatia generosa de atum fresco e macio. Sabor intenso e marcante, perfeito para os amantes de peixe cru.            </p>
+
+            <p class="item-subtitle">
+              <i class="fa-solid fa-bowl-food"></i>
+              Dinheiros
+            </p>
+
+          </div>
+      </li>
+        
+        <li id="no_results">
+          <p> Não encontrado</p>
+
+        </li>
+
+       </ul>
+    </div>
 
     </div>
-  </div>
+  
+
+  <script src="cardapio.js">
+
+  </script>
+
 </body>
 </html>
