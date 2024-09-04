@@ -73,8 +73,8 @@ body {
 }
 
 #imgtopo {
-  padding-top: 17%;
-  padding-bottom: 17%;
+  padding-top: 25%;
+  padding-bottom: 25%;
   position: relative;
   display: flex;
   flex-direction: center;
@@ -90,13 +90,14 @@ body {
   width: 640px;
   position: absolute;
   transition: opacity 900ms;
+  display: flex;
+  padding-top: 60%;
+  padding-bottom: 60%
 }
 
 #imgtopo img.selec {
   opacity: 1;
 }
-
-
 
 
 p {

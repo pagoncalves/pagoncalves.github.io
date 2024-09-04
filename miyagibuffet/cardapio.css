@@ -145,6 +145,11 @@ box-sizing: border-box;
     color: black;
   }
 
+  #qtde{
+    width: 34px;
+   text-align: center;
+  }
+
   #no_results{
     display: none;
     text-align: center;

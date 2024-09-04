@@ -44,6 +44,37 @@ searchInput.addEventListener('input', (event) => {
         noResults.style.display = 'none'; // Oculta a mensagem "nenhum resultado"
     }
 });
+var qtd = 0;
+
+const btnPlus = document.getElementById('plus');
+var quantidade = document.getElementById('qtde');
+const btnMinus = document.getElementById('minus');
+
+
+btnPlus.addEventListener('click',
+    function plus(){
+        
+        if(qtd >= 10){
+            quantidade.value = 10;
+        }else {
+        qtd++;    
+        quantidade.value = qtd;
+        }
+} )
+
+btnMinus.addEventListener('click', 
+    function minus(){
+      
+        if( qtd <= 0){
+            quantidade.value = 0;
+        } else {
+             qtd--;
+        quantidade.value = qtd;
+        }
+    }
+)
+
+
 
 // Função para formatar strings: remove espaços em branco, transforma em lowercase e remove acentos
 function formatString(value) {
