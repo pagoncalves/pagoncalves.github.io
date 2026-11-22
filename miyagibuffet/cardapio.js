@@ -1,4 +1,35 @@
+// ===== Envio do pedido para o n8n =====
+const WEBHOOK_URL = "COLE_AQUI_A_URL_DO_WEBHOOK";
+const btnEnviar = document.getElementById('enviar');
 
+if (btnEnviar) {
+    btnEnviar.addEventListener('click', async () => {
+        const nome = document.getElementById('nome_pedido').value.trim();
+        const email = document.getElementById('email_pedido').value.trim();
+        const msg = document.getElementById('status_pedido');
+
+        if (nome === '' || email === '') {
+            msg.textContent = 'Preencha seu nome e e-mail.';
+            return;
+        }
+
+        btnEnviar.disabled = true; // evita cliques duplos (cada envio cria registros no CRM)
+        try {
+            const r = await fetch(WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ nome: nome, email: email })
+            });
+            if (!r.ok) throw new Error();
+            msg.textContent = 'Pedido enviado! Entraremos em contato.';
+            document.getElementById('nome_pedido').value = '';
+            document.getElementById('email_pedido').value = '';
+        } catch {
+            msg.textContent = 'Não foi possível enviar. Tente novamente.';
+        }
+        btnEnviar.disabled = false;
+    });
+}
 // Seleciona o input de busca
 const searchInput = document.getElementById('search');
 
